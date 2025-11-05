@@ -7,6 +7,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from .utils import FindCallback
 from google.cloud import translate_v2 as translate
 from google.oauth2 import service_account
+import json
 from .tools.movie.get_user_movie import get_user_movie
 from utils.get_movie_url import get_movie_url
 
@@ -15,8 +16,10 @@ router = Router()
 # creds = service_account.Credentials.from_service_account_file(
 #     GOOGLE_APPLICATION_CREDENTIALS
 # )
+
+creds_json = json.loads(GOOGLE_APPLICATION_CREDENTIALS)
 creds = service_account.Credentials.from_service_account_info(
-    GOOGLE_APPLICATION_CREDENTIALS
+    creds_json
 )
 translate_client = translate.Client(credentials=creds)
 
