@@ -1,5 +1,5 @@
 from services.tmdb_client import client
-from config import API_KEY, GOOGLE_APPLICATION_CREDENTIALS
+from config import GOOGLE_APPLICATION_CREDENTIALS
 from constants.lang_content import lang_content
 from constants.errors import error
 from aiogram import Router, types, F
@@ -12,7 +12,10 @@ from utils.get_movie_url import get_movie_url
 
 router = Router()
 
-creds = service_account.Credentials.from_service_account_file(
+# creds = service_account.Credentials.from_service_account_file(
+#     GOOGLE_APPLICATION_CREDENTIALS
+# )
+creds = service_account.Credentials.from_service_account_info(
     GOOGLE_APPLICATION_CREDENTIALS
 )
 translate_client = translate.Client(credentials=creds)
@@ -50,10 +53,6 @@ async def get_request(call: types.CallbackQuery, user):
 
     result_trans = translate_client.detect_language(title)
     lang = result_trans.get('language') or 'en'
-    
-    # url = get_movie_url(movie_type, title, lang)
-    # resp = await client.get(url)
-    # result = resp.json().get("results", [])
 
     try:
         url = get_movie_url(movie_type, title, lang)
