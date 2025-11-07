@@ -98,7 +98,7 @@
 
 import asyncio
 from aiohttp import web
-from config import BOT_KEY
+from config import BOT_KEY, PORT
 from handlers import routers
 from services.tmdb_client import client
 from middlewares.subscription import SubscriptionMiddleware
@@ -128,14 +128,14 @@ async def start_webhook_server():
     # Stripe webhook
     app.router.add_post("/stripe/webhook", stripe_webhook)
 
-    # Отдаём статику (CSS, JS, HTML и т.д.)
+    # static files (CSS, JS, HTML)
     app.router.add_static('/static/', path='static', name='static')
 
-    # ✅ Добавляем маршруты для success и cancel страниц
+    # ✅ routes for success и cancel pages
     app.router.add_get("/success", lambda request: web.FileResponse("static/success.html"))
     app.router.add_get("/cancel", lambda request: web.FileResponse("static/cancel.html"))
 
-    # Middleware для ngrok warning (опционально)
+    # Middleware for ngrok warning (optional)
     @web.middleware
     async def skip_ngrok_warning(request, handler):
         response = await handler(request)
@@ -144,12 +144,12 @@ async def start_webhook_server():
 
     app.middlewares.append(skip_ngrok_warning)
 
-    # Запуск
+    # execute
     runner = web.AppRunner(app)
     await runner.setup()
-    site = web.TCPSite(runner, "0.0.0.0", 8000)
+    site = web.TCPSite(runner, "0.0.0.0", PORT)
     await site.start()
-    print("🌍 Stripe webhook server started at http://0.0.0.0:8000")
+    print(f"🌍 Stripe webhook server started at http://0.0.0.0:{PORT}")
 
 
 
