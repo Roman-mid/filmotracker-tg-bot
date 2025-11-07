@@ -27,7 +27,7 @@ async def remove_movie(call: types.CallbackQuery, callback_data: FindCallback, u
   except Exception as e:
     print(f"Ошибка при проверки филь в базе (remove_movie_from_list): {e}")
     print(f"[ERROR], user_id={user_id} {type(e).__name__}: {e}")
-    await call.message.answer(user_id, error[user_lang], parse_mode='HTML')
+    await call.message.answer( error[user_lang], parse_mode='HTML')
     return
 
   if not movie_to_remove :
@@ -41,7 +41,7 @@ async def remove_movie(call: types.CallbackQuery, callback_data: FindCallback, u
   except Exception as e:
     print(f"Ошибка при удалении фильма (remove_movie_from_list): {e}")
     print(f"[ERROR], user_id={user_id} {type(e).__name__}: {e}")
-    await call.message.answer(user_id, error[user_lang], parse_mode='HTML')
+    await call.message.answer( error[user_lang], parse_mode='HTML')
     return
 
   movies = [line for line in current_text if f'- {movie_title}' != line]

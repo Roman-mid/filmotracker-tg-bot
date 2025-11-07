@@ -36,7 +36,7 @@ async def add_movie(call: types.CallbackQuery, callback_data: FindCallback, user
     except Exception as e:
         print(f"Ошибка при получении данных о фильме: {e}")
         print(f"[ERROR], user_id={user_id} {type(e).__name__}: {e}")
-        await call.message.answer(user_id, error[user_lang], parse_mode='HTML')
+        await call.message.answer( error[user_lang], parse_mode='HTML')
         return
     
     title = data.get("title") or data.get("name")   
@@ -58,7 +58,7 @@ async def add_movie(call: types.CallbackQuery, callback_data: FindCallback, user
         movie_in_db = await get_user_movie(user_id, movie_id)
     except Exception as e:
         print(f"Ошибка при проверке фильма в базе: {e}")
-        await call.message.answer(user_id, error[user_lang])
+        await call.message.answer( error[user_lang])
         return
 
     if movie_in_db:
@@ -78,7 +78,7 @@ async def add_movie(call: types.CallbackQuery, callback_data: FindCallback, user
     except Exception as e:
         print(f"Ошибка при добавлении фильма в базу: {e}")
         print(f"[ERROR], user_id={user_id} {type(e).__name__}: {e}")
-        await call.message.answer(user_id, error[user_lang])
+        await call.message.answer( error[user_lang])
 
     # movie_in_db = await get_user_movie(user_id, movie_id)
     
