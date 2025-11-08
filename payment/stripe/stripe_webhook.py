@@ -30,6 +30,7 @@ async def handle_error(user_id: int, e: Exception, user_lang: str = "en"):
 
 # MAIN webhook
 async def stripe_webhook(request: web.Request):
+    print("📩 Webhook received!")
     payload = await request.text()
     sig_header = request.headers.get("Stripe-Signature")
 
@@ -172,6 +173,6 @@ async def stripe_webhook(request: web.Request):
     return web.Response(status=200)
 
 
-app = web.Application()
-app.router.add_post("/stripe/webhook", stripe_webhook)
+# app = web.Application()
+# app.router.add_post("/stripe/webhook", stripe_webhook)
 
