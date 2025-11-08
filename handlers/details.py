@@ -150,6 +150,9 @@ async def get_details(call: types.CallbackQuery, callback_data: FindCallback, us
 
     caption = "\n".join(lines)
 
+    if len(caption) > 1024:
+        caption = caption[:1021] + "..."
+
     if poster_path:
         poster_url = f"https://image.tmdb.org/t/p/w342{poster_path}"
         await call.message.answer_photo(poster_url, caption=caption, parse_mode="HTML", reply_markup=kb)
