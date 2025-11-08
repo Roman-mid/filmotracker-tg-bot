@@ -31,8 +31,8 @@ async def stripe_create_checkout_session(user_id: int):
         "price": STRIPE_PRICE_ID,
         "quantity": 1,
       }],
-      success_url="https://unfuelled-uninjuring-scarlette.ngrok-free.dev/success?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url="https://unfuelled-uninjuring-scarlette.ngrok-free.dev/cancel",
+      success_url="https://filmotracker-tg-bot.herokuapp.com/success?session_id={CHECKOUT_SESSION_ID}",
+      cancel_url="https://filmotracker-tg-bot.herokuapp.com/cancel",
       # success_url="https://unfuelled-uninjuring-scarlette.ngrok-free.dev/static/success.html",
       # cancel_url="https://unfuelled-uninjuring-scarlette.ngrok-free.dev/static/cancel.html",
       client_reference_id=str(user_id),  # connect with Telegram user_id
