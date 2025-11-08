@@ -1,5 +1,5 @@
 from services.tmdb_client import client
-from config import API_KEY, MASTER_ID, PAYMENT_KEY
+from config import API_KEY, MASTER_ID
 from constants.lang_content import lang_content
 from .tools.movie.get_new_released_movies import get_new_released_movies
 from .tools.movie.update_movie_release import update_movie_release

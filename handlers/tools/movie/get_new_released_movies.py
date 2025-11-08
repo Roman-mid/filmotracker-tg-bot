@@ -1,20 +1,7 @@
 from sqlalchemy import select, and_
-from models import async_session, UserMovie, with_db_session
+from models import UserMovie, with_db_session
 from datetime import date
-from sqlalchemy.ext.asyncio import AsyncSession
-
-
-# async def get_new_released_movies(user_id) -> list[UserMovie] | None:
-#   async with async_session() as session:
-#     result = await session.execute(select(UserMovie).where(
-#       and_(
-#         UserMovie.user_id == user_id, 
-#         UserMovie.next_release_date <= date.today())
-#       )
-#     )
-
-#     return result.scalars().all()
-  
+from sqlalchemy.ext.asyncio import AsyncSession 
 
 @with_db_session
 async def get_new_released_movies(

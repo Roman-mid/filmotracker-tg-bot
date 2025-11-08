@@ -13,10 +13,6 @@ from utils.get_movie_url import get_movie_url
 
 router = Router()
 
-# creds = service_account.Credentials.from_service_account_file(
-#     GOOGLE_APPLICATION_CREDENTIALS
-# )
-
 creds_json = json.loads(GOOGLE_APPLICATION_CREDENTIALS)
 creds = service_account.Credentials.from_service_account_info(
     creds_json

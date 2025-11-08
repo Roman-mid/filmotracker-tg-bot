@@ -1,7 +1,6 @@
 from aiogram import Router, types, F
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from .utils import FindCallback
-from aiogram.filters import Command
 from pathlib import Path
 from .tools.movie.get_user_movie import get_all_user_movie
 from constants.lang_content import lang_content

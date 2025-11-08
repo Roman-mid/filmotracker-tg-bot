@@ -3,11 +3,9 @@ from sqlalchemy import Column, BigInteger, DateTime, Boolean, Integer, String, D
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import declarative_base, sessionmaker
 from datetime import date
-
 from sqlalchemy.exc import OperationalError, InterfaceError
 import asyncio
 from functools import wraps
-
 from config import DATABASE_URL
 
 Base = declarative_base()

@@ -18,7 +18,6 @@ async def remove_movie(call: types.CallbackQuery, callback_data: FindCallback, u
 
   content = lang_content.get(user_lang, lang_content['en'])
   follow_list = content['follow_list']
-
   
   try:
     movie_to_remove = await get_user_movie(user_id, movie_id)
@@ -28,16 +27,11 @@ async def remove_movie(call: types.CallbackQuery, callback_data: FindCallback, u
     await call.message.answer( error[user_lang], parse_mode='HTML')
     return
 
-
-  # movie_to_remove = await get_user_movie(user_id, movie_id)
-
   if not movie_to_remove :
     await call.message.answer(follow_list['already_removed'])
     return
 
   movie_title = movie_to_remove.title
-
-  # await remove_user_movie(movie_to_remove)
 
   try:
     await remove_user_movie(movie_to_remove)

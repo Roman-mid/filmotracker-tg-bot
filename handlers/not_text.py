@@ -13,7 +13,6 @@ user_media  = []
 async def not_text_message(message: types.Message, user):
   user_media.append(message)
 
-  # user_lang = message.from_user.language_code
   user_lang = user.user_lang
   content = lang_content.get(user_lang, lang_content['en'])
   stop_message = content['stop']
@@ -36,7 +35,6 @@ async def not_text_message(message: types.Message, user):
 
   if len(user_media) > 3:
     await message.answer_animation(animation=animation_cry, caption=stop_message['last'])
-
 
 
 async def clear_user_media():

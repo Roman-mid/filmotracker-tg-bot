@@ -1,53 +1,3 @@
-# import asyncio
-# from aiogram import Bot, Dispatcher
-# from aiogram.fsm.storage.memory import MemoryStorage
-# from config import BOT_KEY
-# from handlers import routers
-# from middlewares.subscription import SubscriptionMiddleware
-# from services.scheduler import scheduler
-# from models import init_db
-
-# bot = Bot(BOT_KEY)
-# dp = Dispatcher(storage=MemoryStorage())
-
-# dp.message.middleware(SubscriptionMiddleware())
-# dp.callback_query.middleware(SubscriptionMiddleware())
-
-# for r in routers:
-#     dp.include_router(r)
-
-# async def start_bot():
-#     asyncio.create_task(scheduler(bot))
-#     await dp.start_polling(bot)
-
-# async def main():
-#     await init_db()
-#     await start_bot()
-
-# if __name__ == "__main__":
-#     asyncio.run(main())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import asyncio
 from aiohttp import web
 from config import BOT_KEY, PORT
@@ -108,3 +58,33 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 
+
+# split bot logic & stripe webhook logic
+# import asyncio
+# from aiogram import Bot, Dispatcher
+# from aiogram.fsm.storage.memory import MemoryStorage
+# from config import BOT_KEY
+# from handlers import routers
+# from middlewares.subscription import SubscriptionMiddleware
+# from services.scheduler import scheduler
+# from models import init_db
+
+# bot = Bot(BOT_KEY)
+# dp = Dispatcher(storage=MemoryStorage())
+
+# dp.message.middleware(SubscriptionMiddleware())
+# dp.callback_query.middleware(SubscriptionMiddleware())
+
+# for r in routers:
+#     dp.include_router(r)
+
+# async def start_bot():
+#     asyncio.create_task(scheduler(bot))
+#     await dp.start_polling(bot)
+
+# async def main():
+#     await init_db()
+#     await start_bot()
+
+# if __name__ == "__main__":
+#     asyncio.run(main())

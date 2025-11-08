@@ -1,7 +1,7 @@
 from aiogram import Router, types
 import stripe
 from aiogram.filters import Command
-from config import BOT_KEY, STRIPE_WEBHOOK, STRIPE_APY_KEY
+from config import STRIPE_APY_KEY
 from constants.lang_content import lang_content
 
 stripe.api_key = STRIPE_APY_KEY

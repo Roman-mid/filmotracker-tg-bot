@@ -1,7 +1,6 @@
 from aiogram import Router, types, F
 from .utils import FindCallback
 from services.tmdb_client import client
-from config import API_KEY
 from constants.lang_content import lang_content
 from constants.errors import error
 from datetime import datetime, date
@@ -9,7 +8,6 @@ from .tools.movie.add_user_movie import add_user_movie
 from .tools.movie.get_user_movie import get_user_movie
 from utils.get_movie_url import get_movie_url_details
 from utils.parse_date import parse_date
-
 
 router = Router()
 
@@ -29,7 +27,6 @@ async def add_movie(call: types.CallbackQuery, callback_data: FindCallback, user
 
     try:
         url = get_movie_url_details(movie_type, movie_id, lang)
-        # url = "https://httpbin.org/html"
         resp = await client.get(url)
         resp.raise_for_status()  # check HTTP error (aiohttp/httpx)
         data = resp.json()
@@ -80,22 +77,5 @@ async def add_movie(call: types.CallbackQuery, callback_data: FindCallback, user
         print(f"[ERROR], user_id={user_id} {type(e).__name__}: {e}")
         await call.message.answer( error[user_lang])
 
-    # movie_in_db = await get_user_movie(user_id, movie_id)
-    
-    # if movie_in_db: 
-    #     await call.message.answer(add_movie['already_added'](title), parse_mode="HTML")
-    #     return
-    
-    # # add film
-    # await add_user_movie(
-    #     user_id,
-    #     movie_id,
-    #     title,
-    #     lang,
-    #     movie_type,
-    #     next_release_DATE
-    # )
-
-    # await call.message.answer(add_movie['add'](title), parse_mode="HTML")
 
 

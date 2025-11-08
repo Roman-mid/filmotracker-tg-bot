@@ -1,7 +1,5 @@
 from services.tmdb_client import client
-from config import API_KEY
 from constants.lang_content import lang_content
-from constants.errors import error
 from aiogram import Router, types, F
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from .utils import FindCallback
@@ -14,8 +12,6 @@ router = Router()
 async def show_languages(call: types.CallbackQuery, callback_data: FindCallback, user):
     await call.answer()
 
-    # user_id = call.from_user.id
-    # user_lang = call.from_user.language_code
     user_id = user.user_id
     user_lang = user.user_lang
     content = lang_content.get(user_lang, lang_content['en'])

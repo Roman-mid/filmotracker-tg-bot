@@ -1,7 +1,6 @@
 from aiogram import Router, types, F
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from services.tmdb_client import client
-from config import API_KEY
 from constants.available_langs import available_langs
 from constants.lang_content import lang_content
 from constants.errors import error
