@@ -77,6 +77,7 @@ class SubscriptionMiddleware(BaseMiddleware):
             elif isinstance(event, CallbackQuery) and event.data:
                 await event.message.reply(subscription_expired, parse_mode="HTML", reply_markup=kb)
                 
+            return
                 
 
             # to have several payments methods
