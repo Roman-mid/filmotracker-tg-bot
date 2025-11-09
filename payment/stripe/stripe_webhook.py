@@ -70,7 +70,7 @@ async def stripe_webhook(request: web.Request):
         content = lang_content.get(user_lang, lang_content["en"])
         payment = content["payment"]
 
-        print('----customer_id', user.customer_id == customer_id)
+        print('----customer_id', user.stripe_customer_id == customer_id)
 
         try:
             if not user.customer_id:
