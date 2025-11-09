@@ -11,6 +11,7 @@ from handlers.tools.user.get_user_from_db import fetch_user_from_db
 from payment.stripe.stripe import stripe_create_checkout_session
 from handlers.tools.user.update_user_availability import update_user_availability
 
+
 bot = Bot(token=BOT_KEY)
 stripe.api_key = STRIPE_APY_KEY 
 
@@ -62,17 +63,25 @@ async def stripe_webhook(request: web.Request):
             user_lang = getattr(user, "user_lang", "en")
         except Exception as e:
             await handle_error(user_id, e)
+        
+        if user.is_active:
             return web.Response(status=200)
 
         content = lang_content.get(user_lang, lang_content["en"])
         payment = content["payment"]
 
+        print('----customer_id', user.customer_id == customer_id)
+
         try:
-            await save_stripe_customer_id(user_id, customer_id)
+            if not user.customer_id:
+                await save_stripe_customer_id(user_id, customer_id)
+
             await bot.send_message(int(user_id), payment["session_completed"])
             print(f"✅ Checkout completed for user {user_id}")
         except Exception as e:
             await handle_error(user_id, e, user_lang)
+
+        return web.Response(status=200)
 
     # === customer.subscription.created ===
     elif event["type"] == "customer.subscription.created":
@@ -85,6 +94,9 @@ async def stripe_webhook(request: web.Request):
         except Exception as e:
             print(f"Ошибка при получении пользователя по customer_id: {e}")
             return web.Response(status=200)
+        
+        if user.is_active:
+            return web.Response(status=200)
 
         if user and subscription_id:
             try:
@@ -92,6 +104,8 @@ async def stripe_webhook(request: web.Request):
                 print(f"✅ Subscription created for user {user.user_id}")
             except Exception as e:
                 await handle_error(user.user_id, e, user.user_lang)
+
+        return web.Response(status=200)
 
     # === invoice.payment_succeeded ===
     elif event["type"] == "invoice.payment_succeeded":
@@ -105,6 +119,7 @@ async def stripe_webhook(request: web.Request):
             return web.Response(status=200)
 
         if user:
+
             user_lang = getattr(user, "user_lang", "en")
             content = lang_content.get(user_lang, lang_content["en"])
             payment = content["payment"]
@@ -116,6 +131,9 @@ async def stripe_webhook(request: web.Request):
                 print(f"✅ Payment succeeded for user {user.user_id}")
             except Exception as e:
                 await handle_error(user.user_id, e, user_lang)
+
+        return web.Response(status=200)
+        
 
     # === invoice.payment_failed ===
     elif event["type"] == "invoice.payment_failed":
@@ -129,11 +147,19 @@ async def stripe_webhook(request: web.Request):
             return web.Response(status=200)
 
         if user:
+
+            if(user.is_active):
+                return web.Response(status=200)
+            
             user_lang = getattr(user, "user_lang", "en")
             content = lang_content.get(user_lang, lang_content["en"])
             payment = content["payment"]
+
             await bot.send_message(user.user_id, payment["payment_failed"])
             print(f"⚠️ Payment failed for user {user.user_id}")
+
+        return web.Response(status=200)
+
 
     # === customer.subscription.deleted ===
     elif event["type"] == "customer.subscription.deleted":
@@ -164,6 +190,9 @@ async def stripe_webhook(request: web.Request):
                 print(f"🧾 Subscription expired for user {user_id}")
             except Exception as e:
                 await handle_error(user_id, e, user_lang)
+        
+        return web.Response(status=200)
+
 
     # === Handle unknown events ===
     else:
