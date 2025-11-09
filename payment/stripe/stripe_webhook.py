@@ -52,7 +52,6 @@ async def stripe_webhook(request: web.Request):
     if event["type"] == "checkout.session.completed":
         session = event["data"]["object"]
         user_id = session.get("client_reference_id") or session.get("metadata", {}).get("tg_user_id")
-        customer_id = session.get("customer")
 
         if not user_id:
             print("⚠️ Missing user_id in checkout.session.completed")
@@ -70,10 +69,9 @@ async def stripe_webhook(request: web.Request):
         content = lang_content.get(user_lang, lang_content["en"])
         payment = content["payment"]
 
-        print('----customer_id', user.stripe_customer_id == customer_id)
-
         try:
-            if not user.customer_id:
+            if not user.stripe_customer_id:
+                customer_id = session.get("customer")
                 await save_stripe_customer_id(user_id, customer_id)
 
             await bot.send_message(int(user_id), payment["session_completed"])
