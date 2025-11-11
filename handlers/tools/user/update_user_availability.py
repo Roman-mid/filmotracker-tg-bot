@@ -9,7 +9,8 @@ async def update_user_availability(user_id: int, is_available: bool, *, session:
   values = {'is_active': is_available}
 
   if is_available:
-    values['subscription_until'] = datetime.now( ) + timedelta(days=30)
+    # values['subscription_until'] = datetime.now( ) + timedelta(days=30)
+    values['subscription_until'] = datetime.now() + timedelta(hours=1)
 
   stmt = (
     update(User)
