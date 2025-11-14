@@ -6,6 +6,7 @@ from constants.start_user_message import start_user_message
 from handlers.tools.user.get_user_from_db import fetch_user_from_db
 from payment.stripe.stripe import stripe_create_checkout_session
 from handlers.tools.user.update_user_availability import update_user_availability
+from config import MASTER_ID
 
 class SubscriptionMiddleware(BaseMiddleware):
     async def __call__(self, handler, event, data):
@@ -45,14 +46,12 @@ class SubscriptionMiddleware(BaseMiddleware):
         
         data['user'] = user
 
-        if (
-            not user.is_active or 
-            user.subscription_until and 
-            user.subscription_until < datetime.now()
-            ):
+        is_expired = user.subscription_until is not None and user.subscription_until < datetime.now()
+
+        if (not user.is_active or is_expired) and user.user_id != MASTER_ID:
+            
             if user.is_active:
                 await update_user_availability(user_id, False)
-
 
             kb = await stripe_create_checkout_session(event.from_user.id)
 

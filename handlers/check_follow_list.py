@@ -1,5 +1,5 @@
 from services.tmdb_client import client
-from config import API_KEY, MASTER_ID
+from config import MASTER_ID
 from constants.lang_content import lang_content
 from .tools.movie.get_new_released_movies import get_new_released_movies
 from .tools.movie.update_movie_release import update_movie_release
@@ -17,8 +17,8 @@ async def check_follow_list(bot, user):
   release = content['release']
   new_ep_info = content['next_episode_info']
 
-  if user and (user.subscription_until < datetime.now() or not user.is_active):
-  # if (user and (user.subscription_until < datetime.now() or not user.is_active)) and user_id != MASTER_ID:
+  # if user and (user.subscription_until < datetime.now() or not user.is_active):
+  if (user and (user.subscription_until < datetime.now() or not user.is_active)) and user_id != MASTER_ID:
 
     if user.is_active:
       try:
