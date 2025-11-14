@@ -2,9 +2,7 @@ import asyncio
 from handlers.check_follow_list import check_follow_list
 from handlers.tools.user.get_all_active_users import get_all_users
 
-# CHECK_INTERVAL = 10
-CHECK_INTERVAL = 7200
-# CHECK_INTERVAL = 24 * 60 * 60  # a day
+CHECK_INTERVAL = 24 * 60 * 60  # a day
 
 async def scheduler(bot):
   while True:
