@@ -4,6 +4,7 @@ Telegram bot that helps you discover and track movies and TV shows. </br>
 The bot supports search in any language and notifies you about new episodes or movie premieres so you never miss a release.
 
 ### Functionality
+
 <ul>
   <li>Search for movies and TV shows by title or keyword — works in any language</li>
   <li>
@@ -24,8 +25,8 @@ The bot supports search in any language and notifies you about new episodes or m
   <li>Smart search — automatically translates queries for better accuracy</li>
 </ul>
 
-
 ### Tech Stack
+
 <ul>
   <li><b>Python</b> – main programming language</li>
   <li><b>aiogram</b> – framework for building Telegram bots</li>
@@ -37,4 +38,10 @@ The bot supports search in any language and notifies you about new episodes or m
   <li><b>Heroku</b> – hosting and deployment platform</li>
 </ul>
 
-
+</br>
+<img src="https://drive.google.com/uc?export=view&id=18h1zhcX2b9zYxcGlyh5sHJ4iN2coA3uy" 
+  title="Filmotracker" 
+  width="300" 
+  height="300"
+/>
+</br>
