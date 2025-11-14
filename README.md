@@ -39,7 +39,7 @@ The bot supports search in any language and notifies you about new episodes or m
 </ul>
 
 </br>
-<img src="https://drive.google.com/uc?export=view&id=18h1zhcX2b9zYxcGlyh5sHJ4iN2coA3uy" 
+<img src="files/qr-code.png" 
   title="Filmotracker" 
   width="300" 
   height="300"
