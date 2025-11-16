@@ -7,10 +7,10 @@ start_user_message = {
 Welcome to Filmotracker — your personal assistant for searching, tracking, and getting reminders about movies and TV shows 🎬  
 
 Here you can:  
-• Get detailed information about movies and TV shows  
+• Add series to your library and get notifications about new episodes  
+• Learn detailed information about movies and series  
 • Watch official trailers  
-• Check translations in different languages  
-• Add shows to your library and receive notifications about new episodes  
+• Check on which platforms content is available
 
 🔎 Just type the name of a movie or show, and I’ll show you everything you need.  
 
@@ -34,10 +34,10 @@ Type the name of a movie.
 Добро пожаловать в Filmotracker — твой личный помощник по поиску и отслеживанию фильмов и сериалов 🎬  
 
 Здесь ты можешь:  
+• Добавлять сериалы в библиотеку и получать уведомления о новых сериях  
 • Узнавать подробную информацию о фильмах и сериалах  
 • Смотреть официальные трейлеры  
-• Проверять переводы на разные языки  
-• Добавлять сериалы в библиотеку и получать уведомления о новых сериях  
+• Проверять на каких платформах достпен просмотр  
 
 🔎 Просто введи название фильма или сериала — и я покажу всё, что нужно.  
 
@@ -61,10 +61,10 @@ Type the name of a movie.
 Ласкаво просимо до Filmotracker — твій особистий помічник для пошуку та відстеження фільмів і серіалів 🎬  
 
 Тут ти можеш:  
+• Додавати серіали до бібліотеки та отримувати повідомлення про нові серії  
 • Дізнаватися детальну інформацію про фільми та серіали  
 • Дивитися офіційні трейлери  
-• Перевіряти переклади різними мовами  
-• Додавати серіали до бібліотеки та отримувати повідомлення про нові серії  
+• Перевіряти, на яких платформах доступний перегляд  
 
 🔎 Просто введи назву фільму або серіалу — і я покажу все, що потрібно.  
 
@@ -85,27 +85,27 @@ Type the name of a movie.
     'hello': lambda username: f'''
 👋 مرحبًا، {username}!
 
-مرحبًا بك في Filmotracker — مساعدك الشخصي للبحث وتتبع الأفلام والمسلسلات 🎬  
+مرحبًا بك في Filmotracker — مساعدك الشخصي للبحث ومتابعة الأفلام والمسلسلات 🎬  
 
 هنا يمكنك:  
-• معرفة معلومات مفصلة عن الأفلام والمسلسلات  
-• مشاهدة المقطورات الرسمية  
-• التحقق من الترجمات بلغات مختلفة  
 • إضافة المسلسلات إلى مكتبتك والحصول على إشعارات عند صدور حلقات جديدة  
+• معرفة معلومات مفصلة عن الأفلام والمسلسلات  
+• مشاهدة المقاطع الدعائية الرسمية  
+• التحقق من المنصات التي يمكن مشاهدة المحتوى عليها  
 
-🔎 فقط أدخل اسم الفيلم أو المسلسل، وسأعرض لك كل ما تحتاجه.  
+🔎 فقط اكتب اسم الفيلم أو المسلسل — وسأعرض لك كل ما تحتاجه.  
 
-🧠 سأذكرك عند صدور حلقة أو فيلم جديد — لا حاجة للبحث يدويًا.  
+🧠 سأذكرك عند صدور حلقة جديدة أو فيلم — لا حاجة للبحث يدويًا.  
 
 📚 لفتح المكتبة أو تغيير الإعدادات — اختر الزر المناسب من القائمة.  
 
-❓ إذا كان هناك شيء غير واضح، اضغط «<b>مساعدة</b>» في القائمة، وسأرشدك.  
+❓ إذا كان هناك أي شيء غير واضح، اضغط على «<b>مساعدة</b>» في القائمة، وسأوضح لك كل شيء.  
 
-🎬 <b>هل أنت جاهز للبدء؟*  
+🎬 <b>هل أنت جاهز للبدء🎬؟</b>  
 اكتب اسم الفيلم.
 ''',
     'exist': '✅ أنت مسجل بالفعل.',
-    'user_not_found': 'للتسجيل اضغط /start'
+    'user_not_found': 'لتسجيل الدخول، اضغط /start'
 },
 # fr
 "fr": {
@@ -115,10 +115,10 @@ Type the name of a movie.
 Bienvenue sur Filmotracker — ton assistant personnel pour rechercher, suivre et recevoir des rappels sur les films et séries 🎬  
 
 Ici, tu peux:  
+• Ajouter des séries à votre bibliothèque et recevoir des notifications pour les nouveaux épisodes  
 • Obtenir des informations détaillées sur les films et séries  
 • Regarder les bandes-annonces officielles  
-• Vérifier les traductions dans différentes langues  
-• Ajouter des séries à ta bibliothèque et recevoir des notifications sur les nouveaux épisodes  
+• Vérifier sur quelles plateformes le contenu est disponible  
 
 🔎 Tape simplement le nom d’un film ou d’une série, et je te montrerai tout ce dont tu as besoin.  
 
@@ -142,10 +142,10 @@ Tape le nom d’un film.
 Willkommen bei Filmotracker — dein persönlicher Assistent zum Suchen, Verfolgen und Erinnern an Filme und Serien 🎬  
 
 Hier kannst du:  
-• Detaillierte Informationen über Filme und Serien erhalten  
+• Serien zu deiner Bibliothek hinzufügen und Benachrichtigungen über neue Episoden erhalten  
+• Detaillierte Informationen über Filme und Serien abrufen  
 • Offizielle Trailer ansehen  
-• Übersetzungen in verschiedenen Sprachen prüfen  
-• Serien zu deiner Bibliothek hinzufügen und Benachrichtigungen über neue Folgen erhalten  
+• Prüfen, auf welchen Plattformen Inhalte verfügbar sind
 
 🔎 Gib einfach den Namen eines Films oder einer Serie ein, und ich zeige dir alles, was du brauchst.  
 
@@ -169,10 +169,10 @@ Gib den Namen eines Films ein.
 Benvenuto su Filmotracker — il tuo assistente personale per cercare, seguire e ricevere promemoria su film e serie TV 🎬  
 
 Qui puoi:  
-• Ottenere informazioni dettagliate su film e serie TV  
-• Guardare i trailer ufficiali  
-• Controllare le traduzioni in diverse lingue  
 • Aggiungere serie alla tua libreria e ricevere notifiche sui nuovi episodi  
+• Scoprire informazioni dettagliate su film e serie  
+• Guardare i trailer ufficiali  
+• Controllare su quali piattaforme i contenuti sono disponibili
 
 🔎 Digita semplicemente il nome di un film o di una serie, e ti mostrerò tutto ciò di cui hai bisogno.  
 
@@ -196,10 +196,10 @@ Digita il nome di un film.
 Filmotracker에 오신 것을 환영합니다 — 영화와 시리즈를 검색하고 추적하며 알림을 받을 수 있는 개인 도우미 🎬  
 
 여기에서 할 수 있는 것:  
-• 영화 및 시리즈의 상세 정보 확인  
-• 공식 예고편 시청  
-• 다양한 언어 번역 확인  
 • 시리즈를 라이브러리에 추가하고 새 에피소드 알림 받기  
+• 영화와 시리즈에 대한 자세한 정보 확인  
+• 공식 예고편 시청  
+• 어떤 플랫폼에서 시청 가능한지 확인 
 
 🔎 영화나 시리즈 이름을 입력하면 필요한 모든 정보를 보여드립니다.  
 
@@ -223,10 +223,10 @@ Filmotracker에 오신 것을 환영합니다 — 영화와 시리즈를 검색�
 Witamy w Filmotracker — twój osobisty asystent do wyszukiwania, śledzenia i otrzymywania powiadomień o filmach i serialach 🎬  
 
 Tutaj możesz:  
-• Uzyskać szczegółowe informacje o filmach i serialach  
-• Oglądać oficjalne zwiastuny  
-• Sprawdzać tłumaczenia w różnych językach  
 • Dodawać seriale do biblioteki i otrzymywać powiadomienia o nowych odcinkach  
+• Poznawać szczegółowe informacje o filmach i serialach  
+• Oglądać oficjalne zwiastuny  
+• Sprawdzać, na jakich platformach dostępne są treści
 
 🔎 Wpisz nazwę filmu lub serialu, a pokażę Ci wszystko, czego potrzebujesz.  
 
@@ -250,10 +250,10 @@ Wpisz nazwę filmu.
 Bem-vindo ao Filmotracker — seu assistente pessoal para buscar, acompanhar e receber notificações sobre filmes e séries 🎬  
 
 Aqui você pode:  
+• Adicionar séries à sua biblioteca e receber notificações sobre novos episódios  
 • Obter informações detalhadas sobre filmes e séries  
 • Assistir trailers oficiais  
-• Verificar traduções em diferentes idiomas  
-• Adicionar séries à sua biblioteca e receber notificações sobre novos episódios  
+• Verificar em quais plataformas o conteúdo está disponível
 
 🔎 Digite o nome de um filme ou série, e eu mostrarei tudo o que você precisa.  
 
@@ -277,10 +277,10 @@ Digite o nome de um filme.
 Bienvenido a Filmotracker — tu asistente personal para buscar, seguir y recibir recordatorios sobre películas y series 🎬  
 
 Aquí puedes:  
-• Obtener información detallada sobre películas y series  
-• Ver trailers oficiales  
-• Comprobar traducciones en diferentes idiomas  
-• Añadir series a tu biblioteca y recibir notificaciones sobre nuevos episodios  
+• Agregar series a tu biblioteca y recibir notificaciones sobre nuevos episodios  
+• Conocer información detallada sobre películas y series  
+• Ver los tráileres oficiales  
+• Comprobar en qué plataformas está disponible el contenido
 
 🔎 Simplemente escribe el nombre de una película o serie, y te mostraré todo lo que necesitas.  
 
@@ -304,10 +304,10 @@ Escribe el nombre de una película.
 Filmotracker'a hoş geldin — film ve dizileri aramak, takip etmek ve hatırlatıcı almak için kişisel asistanın 🎬  
 
 Burada yapabileceklerin:  
-• Filmler ve diziler hakkında detaylı bilgi edinmek  
-• Resmi fragmanları izlemek  
-• Farklı dillerde çevirileri kontrol etmek  
-• Dizileri kütüphanene eklemek ve yeni bölümler için bildirim almak  
+• Dizileri kütüphanene ekleyip yeni bölümler için bildirim alabilirsin  
+• Filmler ve diziler hakkında detaylı bilgi öğrenebilirsin  
+• Resmi fragmanları izleyebilirsin  
+• İçeriğin hangi platformlarda olduğunu kontrol edebilirsin 
 
 🔎 Sadece bir film veya dizi adı yaz, sana ihtiyacın olan her şeyi göstereceğim.  
 
@@ -331,10 +331,10 @@ Bir film adı yaz.
 Vítejte ve Filmotracker — vašem osobním asistentovi pro vyhledávání, sledování a připomínky filmů a seriálů 🎬  
 
 Zde můžete:  
+• Přidávat seriály do knihovny a dostávat oznámení o nových epizodách  
 • Získat podrobné informace o filmech a seriálech  
-• Sledujte oficiální trailery  
-• Kontrolovat překlady do různých jazyků  
-• Přidat seriály do knihovny a dostávat upozornění na nové epizody  
+• Sledovat oficiální trailery  
+• Zkontrolovat, na kterých platformách je obsah dostupný
 
 🔎 Stačí zadat název filmu nebo seriálu a ukážu vám vše, co potřebujete.  
 
@@ -358,10 +358,10 @@ Zadejte název filmu.
 Welkom bij Filmotracker — je persoonlijke assistent voor het zoeken, bijhouden en herinneren van films en series 🎬  
 
 Hier kun je:  
+• Series aan je bibliotheek toevoegen en meldingen ontvangen over nieuwe afleveringen  
 • Gedetailleerde informatie over films en series bekijken  
 • Officiële trailers bekijken  
-• Vertalingen in verschillende talen controleren  
-• Series aan je bibliotheek toevoegen en meldingen ontvangen voor nieuwe afleveringen  
+• Controleren op welke platforms inhoud beschikbaar is
 
 🔎 Voer gewoon de naam van een film of serie in en ik laat je alles zien wat je nodig hebt.  
 
@@ -385,10 +385,10 @@ Typ de naam van een film.
 Üdv a Filmotracker-ben — a személyes asszisztensed filmek és sorozatok kereséséhez, nyomon követéséhez és értesítésekhez 🎬  
 
 Itt teheted:  
-• Részletes információk megtekintése filmekről és sorozatokról  
+• Sorozatok hozzáadása a könyvtáradhoz és értesítések a új epizódokról  
+• Részletes információk a filmekről és sorozatokról  
 • Hivatalos előzetesek megtekintése  
-• Fordítások ellenőrzése különböző nyelveken  
-• Sorozatok hozzáadása a könyvtáradhoz és értesítések kapása az új részekről  
+• Ellenőrizheted, mely platformokon érhető el a tartalom 
 
 🔎 Csak írd be a film vagy sorozat nevét, és megmutatom, amit tudnod kell.  
 
@@ -412,10 +412,10 @@ Itt teheted:
 Velkommen til Filmotracker — din personlige assistent for å søke, følge og få påminnelser om filmer og serier 🎬  
 
 Her kan du:  
-• Få detaljert informasjon om filmer og serier  
-• Se offisielle trailere  
-• Sjekke oversettelser på forskjellige språk  
 • Legge til serier i biblioteket ditt og få varsler om nye episoder  
+• Lære detaljerte opplysninger om filmer og serier  
+• Se offisielle trailere  
+• Sjekke på hvilke plattformer innholdet er tilgjengelig
 
 🔎 Skriv bare inn navnet på en film eller serie, så viser jeg deg alt du trenger å vite.  
 
@@ -439,10 +439,10 @@ Skriv inn navnet på en film.
 Välkommen till Filmotracker — din personliga assistent för att söka, följa och få påminnelser om filmer och serier 🎬  
 
 Här kan du:  
+• Lägga till serier i ditt bibliotek och få notiser om nya avsnitt  
 • Få detaljerad information om filmer och serier  
 • Titta på officiella trailers  
-• Kontrollera översättningar på olika språk  
-• Lägga till serier i ditt bibliotek och få notiser om nya avsnitt  
+• Kontrollera på vilka plattformar innehållet finns tillgängligt    
 
 🔎 Skriv bara in namnet på en film eller serie, så visar jag allt du behöver veta.  
 

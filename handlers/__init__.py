@@ -2,7 +2,7 @@ from .start import router as start_router
 from .search import router as search_router
 from .details import router as details_router
 from .trailer import router as trailer_router
-from .languages import router as languages_router
+# from .languages import router as languages_router
 from .add_movie import router as add_movie_router
 from .show_follow_list import router as show_follow_list_router
 from .remove_movie_from_list import router as remove_movie_from_list_router
@@ -15,6 +15,7 @@ from payment.stripe.stripe import router as stripe_create_checkout_session_route
 from .show_lang_settings import router as show_lang_settings_router
 from .select_user_lang import router as select_user_lang_router
 from .help import router as help_router
+from .providers import router as providers_router
 
 routers = [
     start_router,
@@ -25,7 +26,7 @@ routers = [
     search_router,
     details_router,
     trailer_router,
-    languages_router,
+    # languages_router,
     add_movie_router,
     remove_movie_router,
     remove_movie_from_list_router,
@@ -34,4 +35,5 @@ routers = [
     send_subscription_invoice_router,
     stripe_create_checkout_session_router,
     # unsubscribe_user_router
+    providers_router
 ]

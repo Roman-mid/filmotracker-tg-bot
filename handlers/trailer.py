@@ -34,9 +34,9 @@ async def show_trailer(call: types.CallbackQuery, callback_data: FindCallback, u
         ).pack(),
     )
     language_btn = InlineKeyboardButton(
-        text=button['languages'],
+        text=button['providers'],
         callback_data=FindCallback(
-            action="languages", 
+            action="providers", 
             id=movie_id, 
             content_type=movie_type,
             lang=lang

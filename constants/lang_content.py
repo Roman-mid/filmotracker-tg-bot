@@ -2,6 +2,7 @@ lang_content = {
     # english  
     'en': {
         'button': {
+            'providers': 'Providers',
             'remove': 'Remove',
             "remove_from": "Remove from library",
             "add": "Add to library",
@@ -23,6 +24,7 @@ lang_content = {
           'third': '❌ STO-O-OP IT !!!',
           'last': 'Please, stop it. Please... '
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Providers:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 Languages available:\n\n{langs_text}',
         'release': {
           'new_episod': '❗ New episode released.',
@@ -79,6 +81,7 @@ lang_content = {
     # russian
     'ru': {
         'button': {
+            'providers': 'Провайдеры',
             'remove': 'Удалить',
             "remove_from": "Удалить из библиотеки",
             "add": "Добавить в библиотеку",
@@ -100,6 +103,7 @@ lang_content = {
             'third': '❌ ХВА-А-А-А-ТИТ !!!',
             'last': 'Хватит. Я прошу тебя, хватит... '
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Провайдеры:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Доступные языки:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Вышла новая серия.",
@@ -155,6 +159,7 @@ lang_content = {
     # ukrainian
     'uk': {
         'button': {
+           'providers': 'Провайдери',
             'remove': 'Видалити',
             "remove_from": "Видалити з бібліотеки",
             "add": "Додати до бібліотеки",
@@ -176,6 +181,7 @@ lang_content = {
             'third': '❌ ПРИ-И-ПИ-НИ !!!',
             'last': 'Будь людиною, схаменись. Благаю...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Провайдери:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬<b>Доступні мови:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Вийшов новий епізод.",
@@ -231,6 +237,7 @@ lang_content = {
     # arabic
     'ar': {
         'button': {
+           'providers': 'المزوّدون',
             'remove': 'حذف',
             "remove_from": "إزالة من المكتبة",
             "add": "إضافة إلى المكتبة",
@@ -252,6 +259,7 @@ lang_content = {
             'third': '❌ توقّف-وا-أوقف !!!',
             'last': 'من فضلك، توقف. من فضلك...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>الموفرون:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>اللغات المتاحة:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ تم إصدار حلقة جديدة.",
@@ -307,6 +315,7 @@ lang_content = {
     # french
     'fr': {
         'button': {
+           'providers': 'Fournisseurs',
             'remove': 'Supprimer',
             "remove_from": "Supprimer de la bibliothèque",
             "add": "Ajouter à la bibliothèque",
@@ -328,6 +337,7 @@ lang_content = {
             'third': '❌ ARRÊTEEEZ !!!',
             'last': 'S’il vous plaît, arrêtez. S’il vous plaît...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Fournisseurs :</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Langues disponibles:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Nouvel épisode disponible.",
@@ -383,6 +393,7 @@ lang_content = {
     # german
     'de': {
         'button': {
+           'providers': 'Anbieter',
             'remove': 'Entfernen',
             "remove_from": "Aus der Bibliothek entfernen",
             "add": "Zur Bibliothek hinzufügen",
@@ -404,6 +415,7 @@ lang_content = {
             'third': '❌ HÖR AUUUF !!!',
             'last': 'Bitte hör auf. Bitte...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Anbieter:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Verfügbare Sprachen:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Neue Folge veröffentlicht.",
@@ -459,6 +471,7 @@ lang_content = {
     # italian
     'it': {
         'button': {
+           'providers': 'Fornitori',
             'remove': 'Rimuovi',
             "remove_from": "Rimuovi dalla libreria",
             "add": "Aggiungi alla libreria",
@@ -480,6 +493,7 @@ lang_content = {
             'third': '❌ FEEERMA !!!',
             'last': 'Per favore, fermati. Per favore...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Fornitori:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Lingue disponibili:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Nuovo episodio rilasciato.",
@@ -535,6 +549,7 @@ lang_content = {
     # korean
     'ko': {
         'button': {
+           'providers': '공급자',
             'remove': '제거',
             "remove_from": "라이브러리에서 제거",
             "add": "라이브러리에 추가",
@@ -556,6 +571,7 @@ lang_content = {
             'third': '❌ 그만-멈-춰 !!!',
             'last': '제발, 멈춰 주세요. 제발...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>제공사:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>사용 가능한 언어:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ 새로운 에피소드가 출시되었습니다.",
@@ -611,6 +627,7 @@ lang_content = {
     # polish
     'pl': {
         'button': {
+           'providers': 'Dostawcy',
             'remove': 'Usuń',
             "remove_from": "Usuń z biblioteki",
             "add": "Dodaj do biblioteki",
@@ -632,6 +649,7 @@ lang_content = {
             'third': '❌ PRZE-STA-Ń !!!',
             'last': 'Proszę, przestań. Proszę...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Dostawcy:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Dostępne języki:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Nowy odcinek wydany.",
@@ -687,6 +705,7 @@ lang_content = {
     # portuguese - brasil
     'pt-br': {
         'button': {
+           'providers': 'Provedores',
             'remove': 'Remover',
             "remove_from": "Remover da biblioteca",
             "add": "Adicionar à biblioteca",
@@ -708,6 +727,7 @@ lang_content = {
             'third': '❌ PAAARAR !!!',
             'last': 'Por favor, pare. Por favor...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Provedores:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Idiomas disponíveis:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Novo episódio lançado.",
@@ -763,6 +783,7 @@ lang_content = {
     # spain
     'es': {
         'button': {
+           'providers': 'Proveedores',
             'remove': 'Eliminar',
             "remove_from": "Eliminar de la biblioteca",
             "add": "Agregar a la biblioteca",
@@ -784,6 +805,7 @@ lang_content = {
             'third': '❌ DETEEENLO !!!',
             'last': 'Por favor, detente. Por favor...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Proveedores:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Idiomas disponibles:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Nuevo episodio disponible.",
@@ -839,6 +861,7 @@ lang_content = {
     # turkish
     'tr': {
         'button': {
+           'providers': 'Sağlayıcılar',
             'remove': 'Kaldır',
             "remove_from": "Kitaplıktan kaldır",
             "add": "Kitaplığa ekle",
@@ -860,6 +883,7 @@ lang_content = {
             'third': '❌ DUUUR !!!',
             'last': 'Lütfen, dur. Lütfen...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Sağlayıcılar:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Mevcut diller:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Yeni bölüm yayınlandı.",
@@ -915,6 +939,7 @@ lang_content = {
     # czech
     'cs': {
         'button': {
+           'providers': 'Poskytovatelé',
             'remove': 'Odstranit',
             "remove_from": "Odebrat z knihovny",
             "add": "Přidat do knihovny",
@@ -936,6 +961,7 @@ lang_content = {
             'third': '❌ ZAS-TAV TO !!!',
             'last': 'Prosím, zastav to. Prosím...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Poskytovatelé:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Dostupné jazyky:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Nová epizoda byla vydána.",
@@ -991,6 +1017,7 @@ lang_content = {
     # nederlands
     'nl': {
         'button': {
+           'providers': 'Providers',
             'remove': 'Verwijderen',
             "remove_from": "Verwijderen uit bibliotheek",
             "add": "Toevoegen aan bibliotheek",
@@ -1012,6 +1039,7 @@ lang_content = {
             'third': '❌ STO-OP !!!',
             'last': 'Alsjeblieft, stop. Alsjeblieft...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Providers:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Beschikbare talen:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Nieuwe aflevering uitgebracht.",
@@ -1068,6 +1096,7 @@ lang_content = {
     # hungarian
     'hu': {
         'button': {
+           'providers': 'Szolgáltatók',
             'remove': 'Eltávolítás',
             "remove_from": "Eltávolítás a könyvtárból",
             "add": "Hozzáadás a könyvtárhoz",
@@ -1089,6 +1118,7 @@ lang_content = {
             'third': '❌ ÁLLJAA!!!',
             'last': 'Kérlek, állj meg. Kérlek...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Szolgáltatók:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Elérhető nyelvek:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Új epizód jelent meg.",
@@ -1145,6 +1175,7 @@ lang_content = {
     # Norwegian
     'nb': {
         'button': {
+           'providers': 'Leverandører',
             'remove': 'Fjern',
             "remove_from": "Fjern fra biblioteket",
             "add": "Legg til i biblioteket",
@@ -1166,6 +1197,7 @@ lang_content = {
             'third': '❌ STO-O-PP!!!',
             'last': 'Vær så snill, stopp. Vær så snill...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Leverandører:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Tilgjengelige språk:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Ny episode utgitt.",
@@ -1221,6 +1253,7 @@ lang_content = {
     # swedish
     'sv': {
         'button': {
+           'providers': 'Leverantörer',
             'remove': 'Ta bort',
             "remove_from": "Ta bort från biblioteket",
             "add": "Lägg till i biblioteket",
@@ -1242,6 +1275,7 @@ lang_content = {
             'third': '❌ SLU-U-UTA!!!',
             'last': 'Snälla, sluta. Snälla...'
         },
+        'providers': lambda title, text: f'<b>{title}</b>\n<u>Leverantörer:</u>\n\n{text}',
         'languages': lambda langs_text: f'🎬 <b>Tillgängliga språk:</b>\n\n{langs_text}',
         "release": {
             "new_episod": "❗ Nytt avsnitt släppt.",

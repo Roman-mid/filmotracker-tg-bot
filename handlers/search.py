@@ -124,9 +124,9 @@ async def get_request(call: types.CallbackQuery, user):
                         ).pack()
                     ),
                     InlineKeyboardButton(
-                        text=button['languages'],
+                        text=button['providers'],
                         callback_data=FindCallback(
-                            action="languages", 
+                            action="providers", 
                             id=content_id, 
                             content_type=movie_type,
                             lang=lang

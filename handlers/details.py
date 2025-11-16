@@ -36,9 +36,9 @@ async def get_details(call: types.CallbackQuery, callback_data: FindCallback, us
     )
     
     language_btn = InlineKeyboardButton(
-        text=button['languages'],
+        text=button['providers'],
         callback_data=FindCallback(
-            action="languages", 
+            action="providers", 
             id=movie_id, 
             content_type=content_type,
             lang=lang
