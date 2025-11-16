@@ -24,7 +24,7 @@ Here you can:
 Type the name of a movie.
 ''',
     'exist': '✅ You are already registered.',
-    'user_not_found': '❌ User not found. Press /start'
+    'user_not_found': 'To register, click /start'
 },
 # ru
 "ru": {
@@ -51,7 +51,7 @@ Type the name of a movie.
 Напиши название фильма.
 ''',
     'exist': '✅ Вы уже зарегистрированы.',
-    'user_not_found': '❌ Пользователь не найден. Нажмите /start'
+    'user_not_found': 'Для регистрации нажмите /start'
 },
 # uk
 "uk": {
@@ -78,7 +78,7 @@ Type the name of a movie.
 Введи назву фільму.
 ''',
     'exist': '✅ Ви вже зареєстровані.',
-    'user_not_found': '❌ Користувача не знайдено. Натисніть /start'
+    'user_not_found': 'Щоб зареєструватися, натисніть /start'
 },
 # ar
 "ar": {
@@ -105,7 +105,7 @@ Type the name of a movie.
 اكتب اسم الفيلم.
 ''',
     'exist': '✅ أنت مسجل بالفعل.',
-    'user_not_found': '❌ المستخدم غير موجود. اضغط /start'
+    'user_not_found': 'للتسجيل اضغط /start'
 },
 # fr
 "fr": {
@@ -132,7 +132,7 @@ Ici, tu peux:
 Tape le nom d’un film.
 ''',
     'exist': '✅ Vous êtes déjà inscrit.',
-    'user_not_found': '❌ Utilisateur non trouvé. Appuyez sur /start'
+    'user_not_found': 'Pour vous inscrire, cliquez sur /start'
 },
 # de
 "de": {
@@ -159,7 +159,7 @@ Hier kannst du:
 Gib den Namen eines Films ein.
 ''',
     'exist': '✅ Du bist bereits registriert.',
-    'user_not_found': '❌ Benutzer nicht gefunden. Drücke /start'
+    'user_not_found': 'Klicken Sie zur Registrierung auf /start'
 },
 # it
     "it": {
@@ -186,7 +186,7 @@ Qui puoi:
 Digita il nome di un film.
 ''',
     'exist': '✅ Sei già registrato.',
-    'user_not_found': '❌ Utente non trovato. Premi /start'
+    'user_not_found': 'Per registrarti, fai clic su /start'
 },
 # ko
 "ko": {
@@ -213,7 +213,7 @@ Filmotracker에 오신 것을 환영합니다 — 영화와 시리즈를 검색�
 영화 이름을 입력하세요.
 ''',
     'exist': '✅ 이미 등록되어 있습니다.',
-    'user_not_found': '❌ 사용자를 찾을 수 없습니다. /start를 누르세요'
+    'user_not_found': '/start를 눌러 등록하세요'
 },
 # pl
  "pl": {
@@ -240,7 +240,7 @@ Tutaj możesz:
 Wpisz nazwę filmu.
 ''',
     'exist': '✅ Jesteś już zarejestrowany.',
-    'user_not_found': '❌ Nie znaleziono użytkownika. Naciśnij /start'
+    'user_not_found': 'Aby się zarejestrować, kliknij /start'
 },
 # pr-br
 "pr-br": {
@@ -267,7 +267,7 @@ Aqui você pode:
 Digite o nome de um filme.
 ''',
     'exist': '✅ Você já está registrado.',
-    'user_not_found': '❌ Usuário não encontrado. Pressione /start'
+    'user_not_found': 'Para se registrar, clique em /start'
 },
 # es
 "es": {
@@ -294,7 +294,7 @@ Aquí puedes:
 Escribe el nombre de una película.
 ''',
     'exist': '✅ Ya estás registrado.',
-    'user_not_found': '❌ Usuario no encontrado. Pulsa /start'
+    'user_not_found': 'Para registrarte, haz clic en /start'
 },
 # tr
 "tr": {
@@ -321,7 +321,7 @@ Burada yapabileceklerin:
 Bir film adı yaz.
 ''',
     'exist': '✅ Zaten kayıtlısınız.',
-    'user_not_found': '❌ Kullanıcı bulunamadı. /start tuşlayın'
+    'user_not_found': 'Kayıt olmak için /start yazın'
 },
 # cs
 "cs": {
@@ -348,7 +348,7 @@ Zde můžete:
 Zadejte název filmu.
 ''',
     'exist': '✅ Jste již registrováni.',
-    'user_not_found': '❌ Uživatel nebyl nalezen. Stiskněte /start'
+    'user_not_found': 'Pro registraci klikněte na /start'
 },
 # nl
 "nl": {
@@ -375,7 +375,7 @@ Hier kun je:
 Typ de naam van een film.
 ''',
     'exist': '✅ Je bent al geregistreerd.',
-    'user_not_found': '❌ Gebruiker niet gevonden. Druk op /start'
+    'user_not_found': 'Klik op /start om je te registreren'
 },
 # hu
 "hu": {
@@ -402,7 +402,7 @@ Itt teheted:
 Írd be egy film nevét.
 ''',
     'exist': '✅ Már regisztráltál.',
-    'user_not_found': '❌ Felhasználó nem található. Nyomd meg a /start parancsot'
+    'user_not_found':  'A regisztrációhoz kattintson a /start gombra'
 },
 # nb
 "nb": {
@@ -429,7 +429,7 @@ Her kan du:
 Skriv inn navnet på en film.
 ''',
     'exist': '✅ Du er allerede registrert.',
-    'user_not_found': '❌ Bruker ikke funnet. Trykk /start'
+    'user_not_found': 'For å registrere deg, trykk /start'
 },
 # sv
 "sv": {
@@ -456,7 +456,7 @@ Här kan du:
 Skriv namnet på en film.
 ''',
     'exist': '✅ Du är redan registrerad.',
-    'user_not_found': '❌ Användaren hittades inte. Tryck /start'
+    'user_not_found': 'För att registrera dig, tryck på /start'
 }
 
 }

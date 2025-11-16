@@ -17,7 +17,6 @@ async def check_follow_list(bot, user):
   release = content['release']
   new_ep_info = content['next_episode_info']
 
-  # if user and (user.subscription_until < datetime.now() or not user.is_active):
   if (user and (user.subscription_until < datetime.now() or not user.is_active)) and user_id != MASTER_ID:
 
     if user.is_active:
