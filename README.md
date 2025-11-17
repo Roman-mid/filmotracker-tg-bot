@@ -1,7 +1,7 @@
 # Filmotracker
 
 Telegram bot that helps you discover and track movies and TV shows. </br>
-The bot supports search in any language and notifies you about new episodes or movie premieres so you never miss a release.
+Save the movie into your library and get notifications when new episodes are released.
 
 ### Functionality
 
@@ -18,7 +18,7 @@ The bot supports search in any language and notifies you about new episodes or m
     </ul>
   </li>
   <li>Watch trailer</li>
-  <li>Available translation languages</li>
+  <li>Check the providers where the movie is available</li>
   <li>Personal library — save titles to track future releases</li>
   <li>Release notifications — get alerts about new episode</li>
   <li>Interface available in 17 languages</li>
